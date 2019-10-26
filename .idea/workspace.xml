@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46fd97fc-9f16-45f0-933f-ad028e588947" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +15,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stream.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="901">
+              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#32#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,10 +118,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stream.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="901">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#32#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
