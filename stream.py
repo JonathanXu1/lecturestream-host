@@ -1,25 +1,21 @@
-"""
-Simply display the contents of the webcam with optional mirroring using OpenCV 
-via the new Pythonic cv2 interface.  Press <esc> to quit.
-"""
-
+import numpy as np
 import cv2
 
+cv2.startWindowThread()
+cap = cv2.VideoCapture(0)
 
-def show_webcam(mirror=False):
-    cam = cv2.VideoCapture(0)
-    while True:
-        ret_val, img = cam.read()
-        if mirror:
-            img = cv2.flip(img, 1)
-        cv2.imshow('my webcam', img)
-        if cv2.waitKey(1) == 27:
-            break  # esc to quit
-    cv2.destroyAllWindows()
+while(True):
+    # reading the frame
+    ret, frame = cap.read()
+    # displaying the frame
+    cv2.imshow('frame',frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        # breaking the loop if the user types q
+        # note that the video window must be highlighted!
+        break
 
-
-def main():
-    show_webcam(mirror=True)
-
-
-main()
+cap.release()
+cv2.destroyAllWindows()
+# the following is necessary on the mac,
+# maybe not on other platforms:
+cv2.waitKey(1)
