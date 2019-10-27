@@ -1,10 +1,12 @@
 # import the necessary packages
 import numpy as np
 import cv2
-#import serial
+import time
+import sys
+import serial
 
 # Establish the connection on a specific port
-#ser = serial.Serial('/dev/tty.usbmodem1d11', 9600)
+ser = serial.Serial('COM3', 9600)
 
 # initialize the HOG descriptor/person detector
 hog = cv2.HOGDescriptor()
@@ -37,12 +39,17 @@ while (True):
 
     boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
 
+    sent = False
     for (xA, yA, xB, yB) in boxes:
         # display the detected boxes in the colour picture
         cv2.rectangle(frame, (xA, yA), (xB, yB), (0, 255, 0), 2)
         xAvg = (xB+xA)/2
-        xDelt = (xAvg - 320)/80
-        print(xDelt)
+        xDelt = ((xAvg - 320)/80) + 4
+        if(not sent):
+            ser.write(int(xDelt))
+            sent = True
+
+        # print(xDelt)
 
     # Write the output video
     out.write(frame.astype('uint8'))
